@@ -12,7 +12,8 @@ reactlog_show(log, time = TRUE, ...)
 \arguments{
 \item{log}{Log produced by shiny to be processed}
 
-\item{session_token}{token to be used to subset which session is displayed.  Defaults to all sessions.}
+\item{session_token}{token to be used to subset which session is displayed.
+Defaults to all sessions.}
 
 \item{time}{A boolean that specifies whether or not to display the
 time that each reactive takes to calculate a result.}
@@ -25,9 +26,10 @@ dependencies and execution in your application.
 }
 \details{
 To use the reactive log visualizer, start with a fresh R session and
-run the command \code{options(shiny.reactlog=TRUE)}; then launch your
-application in the usual way (e.g. using \code{\link[shiny]{runApp}}). At
-any time you can hit \preformatted{Ctrl+F3} (or for Mac users, \preformatted{Cmd+F3}) in your
+run the command \code{reactlog_enable()}; then launch your
+application in the usual way (e.g. using \code{\link[shiny:runApp]{shiny::runApp()}}). At
+any time you can hit \preformatted{Ctrl+F3}
+(or for Mac users, \preformatted{Cmd+F3}) in your
 web browser to launch the reactive log visualization.
 
 The reactive log visualization only includes reactive activity up
@@ -41,14 +43,14 @@ in the process, not just for a particular application or session.
 
 As an alternative to pressing \preformatted{Ctrl/Cmd+F3}--for example, if you
 are using reactives outside of the context of a Shiny
-application--you can run the \code{showReactLog} function, which will
+application--you can run the \code{\link[shiny:reactlog]{shiny::reactlogShow()}} function, which will
 generate the reactive log visualization as a static HTML file and
 launch it in your default browser. In this case, refreshing your
 browser will not load new activity into the report; you will need to
-call \code{showReactLog()} explicitly.
+call \code{\link[shiny:reactlog]{shiny::reactlogShow()}} explicitly.
 
-For security and performance reasons, do not enable
-\code{shiny.reactlog} in production environments. When the option is
+For security and performance reasons, do not enable the reactlog
+in production environments. When the option is
 enabled, it's possible for any user of your app to see at least some
 of the source code of your reactive expressions and observers.
 }
@@ -59,16 +61,17 @@ library(shiny)
 library(reactlog)
 
 # tell shiny to log reactivity
-options("shiny.reactlog" = TRUE)
+reactlog_enable()
 
 # run a shiny app
 app <- system.file("examples/01_hello", package = "shiny")
 runApp(app)
 
 # once app has closed, display reactlog
-shiny::showReactLog()
+shiny::reactlogShow()
 }
 }
 \seealso{
-\code{shiny::\link[shiny]{showReactLog}}
+\code{\link[shiny:reactlog]{shiny::reactlogShow()}} and
+\code{\link[=reactlog_enable]{reactlog_enable()}}
 }
