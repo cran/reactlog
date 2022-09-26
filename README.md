@@ -1,7 +1,7 @@
-# reactlog <a href='https://rstudio.github.io/reactlog/'><img src='man/figures/logo.svg' align="right" height="139" /></a>
+# reactlog <a href='https://rstudio.github.io/reactlog/'><img src='man/figures/logo.svg' align="right" style="height: 139px;" /></a>
 
 <!-- badges: start -->
-[![R build status](https://github.com/rstudio/reactlog/workflows/R-CMD-check/badge.svg)](https://github.com/rstudio/reactlog/actions)
+[![R build status](https://github.com/rstudio/reactlog/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rstudio/reactlog/actions)
 [![CRAN version](http://www.r-pkg.org/badges/version/reactlog)](https://cran.r-project.org/package=reactlog)
 [![reactlog downloads per month](http://cranlogs.r-pkg.org/badges/reactlog)](http://www.rpackages.io/package/reactlog)
 [![DOI](https://zenodo.org/badge/137799634.svg)](https://zenodo.org/badge/latestdoi/137799634)
@@ -9,7 +9,7 @@
 <!-- badges: end -->
 
 <br><!-- space above image break only -->
-<!-- [![Coverage status](https://codecov.io/gh/rstudio/reactlog/branch/master/graph/badge.svg)](https://codecov.io/github/rstudio/reactlog?branch=master) -->
+<!-- [![Coverage status](https://codecov.io/gh/rstudio/reactlog/branch/main/graph/badge.svg)](https://codecov.io/github/rstudio/reactlog?branch=main) -->
 
 
 <img src="http://rstudio.github.io/reactlog/readme-images/pythagoras.gif" style="border: 1px solid black; box-shadow: 5px 5px 5px #eee;" width="100%">
